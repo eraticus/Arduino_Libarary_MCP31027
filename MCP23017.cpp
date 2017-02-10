@@ -69,6 +69,26 @@ int MCP23017::test()
 		
 	}
 	
+	void MCP23017::setDDRA(int value)
+	{
+		setRegister(IODIRA, ~value);
+	}
+	
+	void MCP23017::setDDRB(int value)
+	{
+		setRegister(IODIRB, ~value);
+	}
+	
+	
+	void MCP23017::setPORTA(int value)
+	{
+		setRegister(GPIOA, value);
+	}
+	
+	void MCP23017::setPORTB(int value)
+	{
+		setRegister(GPIOB, value);
+	}
 	
 	int MCP23017::getRegister(int reg)
 	{

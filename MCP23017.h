@@ -14,6 +14,12 @@ class MCP23017
 
 	void pinMode(int pin, int mode);
 	void digitalWrite(int pin, int value);
+	
+	// following Atmel ASM
+	void setDDRA(int value);
+	void setDDRB(int value);
+	void setPORTA(int value);
+	void setPORTB(int value);
 	int test();
 	
   // library-accessible "private" interface
