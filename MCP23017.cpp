@@ -15,7 +15,7 @@ int MCP23017::test()
 	
 	void MCP23017::pinMode(int pin, int direction)
 	{
-		if (pin<8) // register A will be all we handle for now
+		if (pin<8)
 		{
 		int x = getRegister(IODIRA);
 		if (direction == INPUT)
@@ -41,7 +41,7 @@ int MCP23017::test()
 	
 	void MCP23017::digitalWrite(int pin, int value)
 	{
-		if (pin<8) // register A will be all we handle for now
+		if (pin<8)
 		{
 		int x = getRegister(GPIOA);
 		if (value == HIGH)

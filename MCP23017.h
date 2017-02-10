@@ -15,12 +15,15 @@ class MCP23017
 	void pinMode(int pin, int mode);
 	void digitalWrite(int pin, int value);
 	int test();
-	int getRegister(int reg); // make private
-	void setRegister(int reg, int val); // make private
 	
-    
   // library-accessible "private" interface
   private:
 	int _address;
+	
+	// interface to I2C
+	int getRegister(int reg); // make private
+	void setRegister(int reg, int val); // make private
+	
+	
     
 };
