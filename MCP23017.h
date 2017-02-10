@@ -1,9 +1,10 @@
 #include <Arduino.h>
 
 //const int IODIRA = 0x00;
-#define IODIRA  0x00
-#define GPIOA 0x12
-
+const int IODIRA = 0x00;
+const int IODIRB = 0x01;
+const int GPIOA = 0x12;
+const int GPIOB = 0x13;
 
 class MCP23017
 {
